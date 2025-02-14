@@ -15,7 +15,7 @@
 	position: absolute;
 	border: 2px solid black;
 	border-top: none;
-	bottom: 50%;
+	bottom: 49%;
 	transform: translateY(0) scale(1);
 	cursor: pointer;
 }
@@ -28,6 +28,22 @@
 	border-left: 100px solid transparent;
 	border-right: 100px solid transparent;
 	border-top: 60px solid rgb(255, 159, 175);
+	transition: transform 0.5s ease;
+	transform: translateY(0) scale(1);
+	cursor: pointer;
+	z-index: 1;
+}
+
+
+
+.triangleup {
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: 53%;
+	border-left: 200px solid transparent;
+	border-right: 200px solid transparent;
+	border-bottom: 60px solid rgb(255, 159, 175);
 	transition: transform 0.5s ease;
 	transform: translateY(0) scale(1);
 	cursor: pointer;
@@ -52,3 +68,26 @@
 	border-radius: 5px;
 	cursor: pointer;
 }
+
+.clickme {
+	margin-top: 150px;
+}
+
+.full-page {
+	width: 198px;
+	height: 108px;
+	background-color: pink;
+	transition: transform 0.5s ease;
+	transform: scale(1);
+	transform-origin: center center;
+	position: absolute;
+  visibility: hidden;
+	z-index: -1;
+}
+
+.full-page.zoom {
+	transform: scale(8);
+	visibility: visible;
+	z-index: 10;
+	transition: transform 0.5s ease, visibility 0s 0s; /* Instantly visible */
+  }
